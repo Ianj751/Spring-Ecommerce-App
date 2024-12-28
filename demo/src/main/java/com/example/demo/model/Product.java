@@ -18,15 +18,16 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private String description;
     private BigDecimal price;
     private Integer quantity;
-
+    private String image;
 
     //One product may have many comments.
     //A comments table with a column for the id of the post it corresponds to
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Comment> comments = new ArrayList<>();
+    private final List<Comment> comments = new ArrayList<>();
 
 }
