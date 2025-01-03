@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 public class OrderDTO {
     private Long id;
-    private Long user_id;
+    private Long userId;
     @NotBlank(message = "Address cannot be blank")
     private String address;
     @NotBlank(message = "Phone Number cannot be blank")

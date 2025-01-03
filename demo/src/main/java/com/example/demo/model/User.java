@@ -30,7 +30,7 @@ public class User implements UserDetails {
     @NotBlank(message = "Email cannot be blank")
     private String password;
 
-    @ManyToOne
+
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Cart cart;
 
@@ -74,4 +74,5 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
 }

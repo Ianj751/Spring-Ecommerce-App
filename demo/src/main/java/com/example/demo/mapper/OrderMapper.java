@@ -20,7 +20,6 @@ public interface OrderMapper {
     Order toEntity(OrderDTO orderDTO);
 
     List<OrderDTO> toDTOs(List<Order> orders);
-
     List<Order> toEntities(List<OrderDTO> orderDTOS);
 
     @Mapping(target = "productId", source = "product.id")
@@ -29,8 +28,6 @@ public interface OrderMapper {
     @Mapping(target = "product.id", source = "productId")
     OrderItem toOrderItemEntity(OrderItemDTO orderItemDTO);
 
-
-    List<OrderItemDTO> toOrderItemDTOs(List<OrderItem> orderItems);
-
-    List<Order> toOrderItemEntities(List<OrderItemDTO> orderItemDTOS);
+    List<OrderItemDTO> toOrderItemDTOs(List<OrderItem> orderItem);
+    List<OrderItem> toOrderItemEntities(List<OrderItemDTO> orderItemDTO);
 }

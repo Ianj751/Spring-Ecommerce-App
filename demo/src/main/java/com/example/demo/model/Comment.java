@@ -15,7 +15,7 @@ public class Comment {
     private Long id;
     private String content;
     private Integer score;
-    private Long userId;
+
 
     //Many comments may be on one product
     @ManyToOne
